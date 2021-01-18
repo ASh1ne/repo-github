@@ -1,0 +1,13 @@
+print("Введите сумму выручки")
+gain = int(input())
+print("Введите сумму издержек")
+costs = int(input())
+if gain - costs < 0:
+    print(f"К сожалению, у нас убытки в размере {(gain - costs):.2f}р.")
+else:
+    print(f"Поздравляем, фирма принесла прибыль в размере {(gain - costs):.2f}р.")
+    profit = (gain - costs)/gain
+    print(f"Рентабельность составляет {profit:.2%}")
+    print("Введите количество сотрудников")
+    numberEmployees = int(input())
+    print(f"Прибыль на каждого сотрудника составляет {(gain-costs)/numberEmployees:.2f}р.")

@@ -1,0 +1,4 @@
+print("Введите число")
+a = input()
+result = int(a) + int(a*2) + int(a*3)
+print(result)

@@ -1,0 +1,6 @@
+print("Введите время в секундах")
+timeRaw = int(input())
+timeHour = timeRaw//3600
+timeMinute = (timeRaw%3600)//60
+timeSecond = (timeRaw%3600)%60
+print(f"Время в формате чч:мм:сс выглядит так: {timeHour:02}:{timeMinute:02}:{timeSecond:02}")

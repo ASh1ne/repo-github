@@ -1,0 +1,12 @@
+print("Введите число")
+number = input()
+lenght = len(number)
+i = 0
+maxNum = int(number[0])
+while(i<lenght):
+    if((maxNum-int(number[i]))<1):
+        maxNum = int(number[i])
+    i = i+1
+
+print(maxNum)
+
