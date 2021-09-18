@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let temp_celsiy = prompt('Введите температуру по цельсию');
+        let temp_fareng = (9 / 5) * temp_celsiy + 32;
+        alert('Температура по Фаренгейту: ' + temp_fareng)
+        let name = '';
+        let admin = '';
+        name = prompt('Insert name, please: ');
+        admin = name;
+        console.log(admin);
+        console.log(10 + 10 + "10"); // Складывает результат первого сложения и "10" строчного типа, которое не воспринимается как число.
+        console.log(10 + "10" + 10); // Среняя часть является переменной строчного типа, поэтому не воспринимается как число, и все скадывается в строку по очереди.
+        console.log(10 + 10 + +"10") // Численное преобразование с помощью + делает из строковой "10" число
+        console.log(10 / -""); // Результатом деления на 0 d JS (кроме 0/0) является Infinity -"" = -0
+        console.log(10 / +"2,5"); // NaN, т.к. в результате приведения +"2,5" к типу число происходит ошибка из-за запятой
+    </script>
+</body>
+
+</html>
