@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        function Post(author, text, date) {
+            this.author = author;
+            this.text = text;
+            this.date = date;
+        }
+
+        Post.prototype.edit = function () {
+            let edittext = prompt('Введите текст для редакции: ');
+            this.text += (' ' + edittext);
+        }
+
+        function AttachedPost(author, text, date) {
+            Post.call(this, author, text, date);
+            this.highlited = false;
+        }
+
+        AttachedPost.prototype = Object.create(Post.prototype);
+        AttachedPost.prototype.constructor = AttachedPost;
+
+        AttachedPost.prototype.makeposthighlited = function () {
+            this.highlited = true;
+        }
+
+        let newpost1 = new Post('Me', 'WTF?', '29.09.2021');
+        newpost1.edit();
+        alert(newpost1.text);
+
+        let newattachedpost1 = new AttachedPost('She', 'IDK.', '15.09.2021');
+        alert(newattachedpost1.highlited);
+        newattachedpost1.edit();
+        newattachedpost1.makeposthighlited();
+        alert(newattachedpost1.highlited);
+        alert(newattachedpost1.text);
+
+    </script>
+</body>
+
+</html>
